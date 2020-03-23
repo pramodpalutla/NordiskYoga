@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Programmer+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:Programmer+CoreDataClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:Programmer+CoreDataClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:Programmer+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
+      location = "group:Ugeplan+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:Ugeplan+CoreDataClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:Ugeplan+CoreDataClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:Ugeplan+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
+      location = "group:Om+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:Om+CoreDataClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:Om+CoreDataClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:Om+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
+      location = "group:Headings+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:Headings+CoreDataClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:Headings+CoreDataClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:Headings+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
+      location = "group:About+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:About+CoreDataClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:About+CoreDataClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:About+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
+      location = "container:Nordisk Yoga.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

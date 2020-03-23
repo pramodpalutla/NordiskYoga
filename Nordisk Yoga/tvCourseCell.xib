@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Optima.ttc">
+            <string>Optima-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="KGk-i7-Jjw" customClass="tvCourseCell">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="768" height="65.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Oz-XN-VAP">
+                        <rect key="frame" x="0.0" y="14.5" width="768" height="37"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kl. 99:99" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhj-Tj-Rse">
+                                <rect key="frame" x="62" y="0.0" width="75" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74.5" id="WAL-6j-Jrm"/>
+                                </constraints>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" red="0.39607843139999999" green="0.2666666667" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yd-We-8sD">
+                                <rect key="frame" x="136" y="0.0" width="632" height="37"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Sndreat Hot yoga 
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.39607843139999999" green="0.2666666667" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="17" name="Optima-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Afspaending &amp;">
+                                        <attributes>
+                                            <color key="NSColor" red="0.39607843139999999" green="0.2666666667" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="17" name="Optima-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.80000000000000004" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8Yd-We-8sD" firstAttribute="centerY" secondItem="6Oz-XN-VAP" secondAttribute="centerY" id="SZL-WS-gc9"/>
+                            <constraint firstAttribute="trailing" secondItem="8Yd-We-8sD" secondAttribute="trailing" id="Wx7-aW-pmf"/>
+                            <constraint firstItem="Vhj-Tj-Rse" firstAttribute="top" secondItem="8Yd-We-8sD" secondAttribute="top" id="fRP-m5-6gq"/>
+                            <constraint firstItem="8Yd-We-8sD" firstAttribute="leading" secondItem="Vhj-Tj-Rse" secondAttribute="trailing" constant="-1" id="r4Q-gB-8HZ"/>
+                            <constraint firstAttribute="height" secondItem="8Yd-We-8sD" secondAttribute="height" id="vNo-DI-tLR"/>
+                            <constraint firstItem="Vhj-Tj-Rse" firstAttribute="leading" secondItem="6Oz-XN-VAP" secondAttribute="leading" constant="62" id="x4Y-4h-a1F">
+                                <variation key="heightClass=regular-widthClass=regular" constant="235"/>
+                            </constraint>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="6Oz-XN-VAP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="17i-lx-yiG"/>
+                    <constraint firstAttribute="trailing" secondItem="8Yd-We-8sD" secondAttribute="trailing" id="HvO-Jb-Rof"/>
+                    <constraint firstAttribute="trailing" secondItem="6Oz-XN-VAP" secondAttribute="trailing" id="I3N-aT-V6D"/>
+                    <constraint firstItem="6Oz-XN-VAP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Tqt-eV-eZt"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="HvO-Jb-Rof"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=regular-widthClass=regular">
+                    <mask key="constraints">
+                        <include reference="HvO-Jb-Rof"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="courseLabel" destination="8Yd-We-8sD" id="RMm-FZ-rwV"/>
+                <outlet property="timeLabel" destination="Vhj-Tj-Rse" id="2ek-x0-0s2"/>
+            </connections>
+            <point key="canvasLocation" x="-92" y="15"/>
+        </tableViewCell>
+    </objects>
+</document>

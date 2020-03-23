@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[PlayListViewController playSong:]:PlayListViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "product.productIdentifier">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__37-[PlayListViewController viewDidLoad]_block_invoke:PlayListViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "product.productIdentifier">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TabBarController viewDidLoad]:TabBarController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "tabBar.bounds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__43-[PlayListViewController productPurchased:]_block_invoke:PlayListViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[NSIndexPath indexPathForRow:idx inSection:0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate application:didFinishLaunchingWithOptions:]:AppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "tabBarController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="About" representedClassName="About" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Headings" representedClassName="Headings" syncable="YES" codeGenerationType="class">
+        <attribute name="heading" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="page" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Om" representedClassName="Om" syncable="YES" codeGenerationType="class">
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Programmer" representedClassName="Programmer" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
+    <entity name="Ugeplan" representedClassName="Ugeplan" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="iD" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="next_heading" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prev_heading" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="About" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Headings" positionX="-54" positionY="9" width="128" height="75"/>
+        <element name="Om" positionX="-54" positionY="9" width="128" height="60"/>
+        <element name="Ugeplan" positionX="-54" positionY="9" width="128" height="105"/>
+        <element name="Programmer" positionX="-45" positionY="36" width="128" height="60"/>
+    </elements>
+</model>
