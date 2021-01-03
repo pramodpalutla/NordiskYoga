@@ -271,6 +271,13 @@ _audioPlayer.delegate = self;
 }
 
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+}
+
+
 - (void)productPurchased:(NSNotification *)notification {
     
     NSString * productIdentifier = notification.object;
@@ -312,7 +319,22 @@ _audioPlayer.delegate = self;
     NSURL    *fileURL    =   [NSURL fileURLWithPath:path];
             NSLog(@"Video url : %@",path);
     AVPlayer *player = [[AVPlayer alloc] initWithURL:fileURL];
+    if (@available(iOS 12.0, *)) {
+        [player setPreventsDisplaySleepDuringVideoPlayback:YES];
+    } else {
+        // Fallback on earlier versions
+    }
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+
+    NSError *setCategoryError = nil;
+    BOOL success = [audioSession setCategory:AVAudioSessionCategoryPlayback error:&setCategoryError];
+    if (!success) { /* handle the error condition */ }
+
+    NSError *activationError = nil;
+    success = [audioSession setActive:YES error:&activationError];
+    if (!success) { /* handle the error condition */ }
     [self.videoController setPlayer:player];
+//    player remov
     [self presentViewController:self.videoController animated:YES completion:^{
         [player play];
 
@@ -385,7 +407,7 @@ _audioPlayer.delegate = self;
             return 46;
         return 56;
     }
-        return 53;
+        return 70;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -475,7 +497,15 @@ _audioPlayer.delegate = self;
             [cell.btnPlay setImage:btnImage1];
             
         }
-        nameString = [NSString stringWithFormat:@"%@\nmed %@",mainAF[indexPath.section][indexPath.row][@"title"],mainAF[indexPath.section][indexPath.row][@"name"]];
+    NSString *contentType = mainAF[indexPath.section][indexPath.row][@"type"];
+    if([contentType isEqualToString:@"audio"]) {
+        nameString = [NSString stringWithFormat:@"%@\nLyd\nmed %@",mainAF[indexPath.section][indexPath.row][@"title"],mainAF[indexPath.section][indexPath.row][@"name"]];
+        [cell.imgMediaType setImage:[UIImage imageNamed:@"volume"]];
+    } else {
+        nameString = [NSString stringWithFormat:@"%@\nVideo\nmed %@",mainAF[indexPath.section][indexPath.row][@"title"],mainAF[indexPath.section][indexPath.row][@"name"]];
+        [cell.imgMediaType setImage:[UIImage imageNamed:@"video"]];
+    }
+        
         
 //    }
     

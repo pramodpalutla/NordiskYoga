@@ -67,4 +67,7 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Nordisk Yoga.xcodeproj">
+   </FileRef>
 </Workspace>

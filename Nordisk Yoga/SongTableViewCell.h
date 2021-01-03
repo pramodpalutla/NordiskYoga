@@ -15,5 +15,6 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *btnLock;
 @property (strong, nonatomic) IBOutlet UIImageView *btnPlay;
+@property (strong, nonatomic) IBOutlet UIImageView *imgMediaType;
 
 @end

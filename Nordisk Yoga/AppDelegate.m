@@ -3,6 +3,7 @@
 #import "AppDelegate.h"
 #import "About+CoreDataClass.h"
 #import <CoreData/CoreData.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +19,8 @@
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [NSThread sleepForTimeInterval:5.0];
 
+    [[AVAudioSession sharedInstance] setDelegate: self];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
 //    persistentContainer = [self persistentContainer];
 
     return YES;

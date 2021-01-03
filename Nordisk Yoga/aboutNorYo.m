@@ -85,7 +85,7 @@
         [fade setImage:[UIImage imageNamed:@"i12.9-fade.png"]];
         [fade setFrame:CGRectMake(0,20, 1024, 197)];
     }
-    [_superView insertSubview:fade atIndex:1];
+    [_superView insertSubview:fade atIndex:2];
     
 
     // Do any additional setup after loading the view.

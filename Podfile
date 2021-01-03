@@ -1,9 +1,10 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '6.0'
-
+ platform :ios, '10.0'
+source 'https://github.com/CocoaPods/Specs.git'
 target 'Nordisk Yoga' do
 pod 'M13ProgressSuite', '~> 1.2'
-pod 'AFNetworking', '~> 2.6'
+pod 'AFNetworking', '~> 2.6.3'
+#pod 'AFNetworking', '~> 4.0.0'
 end
 
 target 'Nordisk YogaTests' do

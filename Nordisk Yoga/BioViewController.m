@@ -7,9 +7,10 @@
 #import "tvUgeDayDateCell.h"
 #import "Ugeplan+CoreDataClass.h"
 #import "Headings+CoreDataClass.h"
+#import <WebKit/WebKit.h>
+
 @interface BioViewController ()
 @property (strong, nonatomic) IBOutlet UIView *superView;
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
@@ -27,7 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://nordiskyoga.dk"]]];    _nextButton.titleLabel.text = @"";
+    _nextButton.titleLabel.text = @"";
     pageCount = 0;
     self.appDelegate=(AppDelegate *)[[UIApplication sharedApplication] delegate];
     _ugView.delegate = self;
@@ -38,8 +39,34 @@
     mainArray = [[NSMutableArray alloc]init];
     _activityIndicator.hidesWhenStopped = YES;
     [_activityIndicator startAnimating];
-    [self getHeading];
-    [self getData:@"http://api.nordiskyoga.dk/ugeplan-website.php"];
+    
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://api.nordiskyoga.dk/welcome/get_ugeplan_status"]];
+    [request setValue:@"no-cache" forHTTPHeaderField:@"Cache-Control"];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSError *err = nil;
+               id data = [NSJSONSerialization JSONObjectWithData:responseObject options:nil error:&err];
+               if([data[@"is_checked"] isEqual:@"yes"]){
+                   [self.ugView setHidden:YES];
+                   WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+                   [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.nordiskyoga.dk/"]]];
+                   [self.view addSubview:webView];
+               } else {
+                   [self.ugView setHidden:NO];
+                   [self getHeading];
+                   [self getData:@"http://api.nordiskyoga.dk/ugeplan-website.php"];
+               }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        
+    }];
+    [operation start];
+    
+    
+    
+
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
